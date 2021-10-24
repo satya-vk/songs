@@ -26,7 +26,8 @@ body{
   color:white;
 }
 @media screen and (max-width:500px) and (min-width:100px){
+
   .col{
-    margin-left:100px;
+    margin-left:auto;
   }
 }
