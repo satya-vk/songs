@@ -1,0 +1,36 @@
+
+h1{
+  text-align: center;
+}
+.logo{
+  height:300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width:300px;
+  margin-top:20px;
+  border-radius:10%;
+}
+.btn{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  margin:10px 10px;
+  font-size:2rem;
+  margin-left:43%;
+  border:none;
+  border-radius:6%;
+}
+.btn:active{
+  color:purple
+}
+.btn:visited{
+  color:blue;
+}
+.btn:hover{
+  color:green;
+}
+footer{
+  text-align:center;
+}
