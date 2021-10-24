@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Janatagarege</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="jlka/ntr.jpg" alt="janatagarage" />
+
+  <h1>JaiLavakusa</h1>
+  <audio id="Ravana" src="jlka/Raavana.mp3" preload="auto"></audio>
+  <audio id="Tring" src="jlka/Tring Tring.mp3" preload="auto"></audio>
+  <audio id="Dochesta" src="jlka/Dochestha.mp3" preload="auto"></audio>
+  <audio id="kalla" src="jlka/Nee Kallalona.mp3" preload="auto"></audio>
+  <audio id="zara" src="jlka/Swing Zara.mp3" preload="auto"></audio>
+  <audio id="lokam" src="jlka/Andamaina Lokam.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="ravan()">Ravana<a href="jlka/Raavana.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="trin()">TrinTring<a href="jlka/Tring Tring.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="dochet()">Dochesta<a href="jlka/Dochestha.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="eyes()">NeeKallalona<a href="jlka/Nee Kallalona.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="zar()">SwingZara<a href="jlka/Swing Zara.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="lkm()">AnadamainaLokam<a href="jlka/Andamaina Lokam.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var Ravana = document.getElementById("Ravana");
+      var isPlaying = false;
+
+      function ravan() {
+        isPlaying ? Ravana.pause() : Ravana.play();
+      };
+
+      Ravana.onplaying = function() {
+        isPlaying = true;
+      };
+      Ravana.onpause = function() {
+        isPlaying = false;
+      };
+      var Tring = document.getElementById("Tring");
+      var isPlaying = false;
+
+      function trin() {
+        isPlaying ? Tring.pause() : Tring.play();
+      };
+
+      Tring.onplaying = function() {
+        isPlaying = true;
+      };
+      Tring.onpause = function() {
+          isPlaying = false;
+        };
+      var Dochesta = document.getElementById("Dochesta");
+      var isPlaying = false;
+
+      function dochet() {
+        isPlaying ? Dochesta.pause() : Dochesta.play();
+      };
+
+      Dochesta.onplaying = function() {
+        isPlaying = true;
+      };
+      Dochesta.onpause = function() {
+        isPlaying = false;
+      };
+      var kalla = document.getElementById("kalla");
+      var isPlaying = false;
+
+      function eyes() {
+        isPlaying ? kalla.pause() : kalla.play();
+      };
+
+      kalla.onplaying = function() {
+        isPlaying = true;
+      };
+      kalla.onpause = function() {
+        isPlaying = false;
+      };
+      var zara = document.getElementById("zara");
+      var isPlaying = false;
+
+      function zar() {
+        isPlaying ? zara.pause() : zara.play();
+      };
+
+      zara.onplaying = function() {
+        isPlaying = true;
+      };
+      zara.onpause = function() {
+        isPlaying = false;
+      };
+      var lokam = document.getElementById("lokam");
+      var isPlaying = false;
+
+      function lkm() {
+        isPlaying ? lokam.pause() : lokam.play();
+      };
+
+      lokam.onplaying = function() {
+        isPlaying = true;
+      };
+      lokam.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>

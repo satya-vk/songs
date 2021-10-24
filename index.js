@@ -8,10 +8,13 @@ app.get("/Janatagarege",function(req,res){
   res.sendFile(__dirname+"/janata.html");
 });
 app.get("/NannakuPrematho",function(req,res){
-  res.sendFile(__dirname+"/janata.html");
+  res.sendFile(__dirname+"/nkp.html");
 });
 app.get("/Jailvakusa",function(req,res){
-  res.sendFile(__dirname+"/janata.html");
+  res.sendFile(__dirname+"/jlka.html");
+});
+app.get("/SarileruNikevvaru",function(req,res){
+  res.sendFile(__dirname+"/slnk.html");
 });
 
 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SarileruNikevvaru</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="slnk/mahesh.jpg" alt="janatagarage" />
+
+  <h1>SarileruNikevvaru</h1>
+  <audio id="sarileru" src="slnk/Sarileu Nikevvaru.mp3" preload="auto"></audio>
+  <audio id="block" src="slnk/Sarileu Nikevvaru.mp3" preload="auto"></audio>
+  <audio id="suryudu" src="slnk/Suryudivo Chandrudivo.mp3" preload="auto"></audio>
+  <audio id="army" src="slnk/Indian Army.mp3" preload="auto"></audio>
+  <audio id="Anthem" src="slnk/Sarileru Neekevvaru Anthem.mp3" preload="auto"></audio>
+  <audio id="dang" src="slnk/Daang Daang.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="leru()">SarileruNikevvaru<a href="slnk/Sarileu Nikevvaru.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="blk()">MindBlock<a href="slnk/Mind Block.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="sura()">SuryudivoChandrudivo<a href="slnk/Suryudivo Chandrudivo.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="ary()">Indian Army<a href="slnk/Indian Army.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="antm()">TitleAnthem<a href="slnk/Sarileru Neekevvaru Anthem.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="dang()">DaangDaang<a href="slnk/Daang Daang.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var sarileru = document.getElementById("sarileru");
+      var isPlaying = false;
+
+      function leru() {
+        isPlaying ? sarileru.pause() : sarileru.play();
+      };
+
+      sarileru.onplaying = function() {
+        isPlaying = true;
+      };
+      sarileru.onpause = function() {
+        isPlaying = false;
+      };
+      var block = document.getElementById("block");
+      var isPlaying = false;
+
+      function blk() {
+        isPlaying ? block.pause() : block.play();
+      };
+
+      block.onplaying = function() {
+        isPlaying = true;
+      };
+      block.onpause = function() {
+          isPlaying = false;
+        };
+      var suryudu = document.getElementById("suryudu");
+      var isPlaying = false;
+
+      function sura() {
+        isPlaying ? suryudu.pause() : suryudu.play();
+      };
+
+      suryudu.onplaying = function() {
+        isPlaying = true;
+      };
+      suryudu.onpause = function() {
+        isPlaying = false;
+      };
+      var army = document.getElementById("army");
+      var isPlaying = false;
+
+      function ary() {
+        isPlaying ? army.pause() : army.play();
+      };
+
+      army.onplaying = function() {
+        isPlaying = true;
+      };
+      army.onpause = function() {
+        isPlaying = false;
+      };
+      var Anthem = document.getElementById("Anthem");
+      var isPlaying = false;
+
+      function antm() {
+        isPlaying ? Anthem.pause() : Anthem.play();
+      };
+
+      Anthem.onplaying = function() {
+        isPlaying = true;
+      };
+      Anthem.onpause = function() {
+        isPlaying = false;
+      };
+      var dang = document.getElementById("dang");
+      var isPlaying = false;
+
+      function dang() {
+        isPlaying ? dang.pause() : dang.play();
+      };
+
+      dang.onplaying = function() {
+        isPlaying = true;
+      };
+      dang.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>

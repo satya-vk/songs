@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>NannakuPrematho</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="Nkp/tarak.jpg" alt="Ntr" />
+
+  <h1>NannakuPrematho</h1>
+  <audio id="follow" src="Nkp/Follow Follow.mp3" preload="auto"></audio>
+  <audio id="Dhebba" src="Nkp/Love Dhebba.mp3" preload="auto"></audio>
+  <audio id="again" src="Nkp/Love Me Again.mp3" preload="auto"></audio>
+  <audio id="Manasu" src="Nkp/Na Manasu Neelo.mp3" preload="auto"></audio>
+  <audio id="prema" src="Nkp/Nannaku Prematho.mp3" preload="auto"></audio>
+  <audio id="stop" src="Nkp/Dont stop.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="fol()">FollowFollow<a href="Nkp/Follow Follow.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="Dheb()">LoveDhebba<a href="Nkp/Love Dhebba.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="agin()">LoveMeAgain<a href="Nkp/Love Me Again.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="Mansu()">NaManasuNeelo<a href="Nkp/Na Manasu Neelo.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="prm()">NannakuPrematho<a href="Nkp/Nannaku Prematho.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="stp()">DontStop<a href="Nkp/Nee Na Manasu Neelo.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var follow = document.getElementById("follow");
+      var isPlaying = false;
+
+      function fol() {
+        isPlaying ? follow.pause() : follow.play();
+      };
+
+      follow.onplaying = function() {
+        isPlaying = true;
+      };
+      follow.onpause = function() {
+        isPlaying = false;
+      };
+      var Dhebba = document.getElementById("Dhebba");
+      var isPlaying = false;
+
+      function Dheb() {
+        isPlaying ? Dhebba.pause() : Dhebba.play();
+      };
+
+      Dhebba.onplaying = function() {
+        isPlaying = true;
+      };
+      Dhebba.onpause = function() {
+          isPlaying = false;
+        };
+      var again = document.getElementById("again");
+      var isPlaying = false;
+
+      function agin() {
+        isPlaying ? again.pause() : again.play();
+      };
+
+      again.onplaying = function() {
+        isPlaying = true;
+      };
+      again.onpause = function() {
+        isPlaying = false;
+      };
+      var Manasu = document.getElementById("Manasu");
+      var isPlaying = false;
+
+      function Mansu() {
+        isPlaying ? Manasu.pause() : Manasu.play();
+      };
+
+      Manasu.onplaying = function() {
+        isPlaying = true;
+      };
+      Manasu.onpause = function() {
+        isPlaying = false;
+      };
+      var prema = document.getElementById("prema");
+      var isPlaying = false;
+
+      function prm() {
+        isPlaying ? prema.pause() : prema.play();
+      };
+
+      prema.onplaying = function() {
+        isPlaying = true;
+      };
+      prema.onpause = function() {
+        isPlaying = false;
+      };
+      var stop = document.getElementById("stop");
+      var isPlaying = false;
+
+      function stp() {
+        isPlaying ? stop.pause() : stop.play();
+      };
+
+      stop.onplaying = function() {
+        isPlaying = true;
+      };
+      stop.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>
