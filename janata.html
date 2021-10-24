@@ -6,28 +6,112 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Janatagarege</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <img class="logo" src="images/Janathagarege.jpg" alt="janatagarage" />
 
   <h1>Janathagarege</h1>
-  <div class="songs">
-    <button class="btn" id="btn1">Pranamam</button>
-    <button class="btn" id="btn2">Apple beauty</button>
-    <button class="btn" id="btn3">Pakka local</button>
-    <button class="btn" id="btn4">Jayaho janata</button>
-    <button class="btn" id="btn5">Ni selavadigi</button>
-    <button class="btn" id="btn6">Rockonbro</button>
-
+  <audio id="pranamam" src="music/Pranaamam.mp3" preload="auto"></audio>
+  <audio id="Apple" src="music/Apple Beauty.mp3" preload="auto"></audio>
+  <audio id="jayahoJanatha" src="music/Jayaho Janatha.mp3" preload="auto"></audio>
+  <audio id="Rock" src="music/Rock On Bro.mp3" preload="auto"></audio>
+  <audio id="local" src="music/Pakka Local.mp3" preload="auto"></audio>
+  <audio id="selavu" src="music/Nee Selavadigi.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="togglePlay()">Pranamam<a href="music/Pranaamam.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="apple()">Apple beauty<a href="music/Apple Beauty.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="jayaho()">JayahoJanatha<a href="music/Jayaho Janatha.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="crack()">RockOnBro<a href="music/Rock On Bro.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="pakka()">PakkaLocal<a href="music/Pakka Local.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="sel()">NeeSelavadigi<a href="music/Nee Selavadigi.mp3"download><i class="fa fa-download"></i></a></div>
   </div>
-
   <footer>
-    <p>satyaVk</p>
-  </footer>
-  <script src="janata.js" type = "text/javascript">
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var pranamam = document.getElementById("pranamam");
+      var isPlaying = false;
 
-  </script>
+      function togglePlay() {
+        isPlaying ? pranamam.pause() : pranamam.play();
+      };
+
+      pranamam.onplaying = function() {
+        isPlaying = true;
+      };
+      pranamam.onpause = function() {
+        isPlaying = false;
+      };
+      var Apple = document.getElementById("Apple");
+      var isPlaying = false;
+
+      function apple() {
+        isPlaying ? Apple.pause() : Apple.play();
+      };
+
+      Apple.onplaying = function() {
+        isPlaying = true;
+      };
+      Apple.onpause = function() {
+          isPlaying = false;
+        };
+      var jayahoJanatha = document.getElementById("jayahoJanatha");
+      var isPlaying = false;
+
+      function jayaho() {
+        isPlaying ? jayahoJanatha.pause() : jayahoJanatha.play();
+      };
+
+      jayahoJanatha.onplaying = function() {
+        isPlaying = true;
+      };
+      jayahoJanatha.onpause = function() {
+        isPlaying = false;
+      };
+      var rock = document.getElementById("Rock");
+      var isPlaying = false;
+
+      function crack() {
+        isPlaying ? rock.pause() : rock.play();
+      };
+
+      rock.onplaying = function() {
+        isPlaying = true;
+      };
+      rock.onpause = function() {
+        isPlaying = false;
+      };
+      var local = document.getElementById("local");
+      var isPlaying = false;
+
+      function pakka() {
+        isPlaying ? local.pause() : local.play();
+      };
+
+      local.onplaying = function() {
+        isPlaying = true;
+      };
+      local.onpause = function() {
+        isPlaying = false;
+      };
+      var selavu = document.getElementById("selavu");
+      var isPlaying = false;
+
+      function sel() {
+        isPlaying ? selavu.pause() : selavu.play();
+      };
+
+      selavu.onplaying = function() {
+        isPlaying = true;
+      };
+      selavu.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
 </body>
 
 </html>

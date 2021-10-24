@@ -1,6 +1,9 @@
-
+body{
+  background-color: orange;
+}
 h1{
   text-align: center;
+  color:purple;
 }
 .logo{
   height:300px;
@@ -12,24 +15,19 @@ h1{
   margin-top:20px;
   border-radius:10%;
 }
-.btn{
+.events{
   display:block;
-  text-align:center;
-  text-decoration:none;
-  margin:10px 10px;
+  text-align: center;
   font-size:2rem;
-  margin-left:43%;
-  border:none;
-  border-radius:6%;
-}
-.btn:active{
-  color:purple
-}
-.btn:visited{
+  padding:2% 1%;
+  font-weight:bold;
   color:blue;
 }
-.btn:hover{
-  color:green;
+.events:hover{
+  text-decoration: underline;
+}
+i{
+  float:right;
 }
 footer{
   text-align:center;
