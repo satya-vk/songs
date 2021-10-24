@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>BharathAneNenu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="ban/mahesh.jpg" alt="Mahesh" />
+
+  <h1>Janathagarege</h1>
+  <audio id="bharath" src="ban/Bharat Ane Nenu.mp3" preload="auto"></audio>
+  <audio id="know" src="ban/I Dont Know.mp3" preload="auto"></audio>
+  <audio id="ide" src="ban/Ide Kalala Vunnadhe.mp3" preload="auto"></audio>
+  <audio id="vasu" src="ban/O Vasumathi.mp3" preload="auto"></audio>
+  <audio id="sami" src="ban/Vachaadayyo Saami.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="bharth()">BharathAneNenu<a href="ban/Bharat Ane Nenu.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="kno()">IdontKnow<a href="ban/I Dont Know.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="idee()">IdeKalalaVunnade<a href="ban/Ide Kalala Vunnadhe.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="vas()">Ovasumathi<a href="ban/O Vasumathi.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="sam()">VaccahayyoSami<a href="ban/Vachaadayyo Saami.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var bharath = document.getElementById("bharath");
+      var isPlaying = false;
+
+      function bharth() {
+        isPlaying ? bharath.pause() : bharath.play();
+      };
+
+      bharath.onplaying = function() {
+        isPlaying = true;
+      };
+      bharath.onpause = function() {
+        isPlaying = false;
+      };
+      var know = document.getElementById("know");
+      var isPlaying = false;
+
+      function kno() {
+        isPlaying ? know.pause() : know.play();
+      };
+
+      know.onplaying = function() {
+        isPlaying = true;
+      };
+      know.onpause = function() {
+          isPlaying = false;
+        };
+      var ide = document.getElementById("ide");
+      var isPlaying = false;
+
+      function idee() {
+        isPlaying ? ide.pause() : ide.play();
+      };
+
+      ide.onplaying = function() {
+        isPlaying = true;
+      };
+      ide.onpause = function() {
+        isPlaying = false;
+      };
+      var vasu = document.getElementById("vasu");
+      var isPlaying = false;
+
+      function vas() {
+        isPlaying ? vasu.pause() : vasu.play();
+      };
+
+      vasu.onplaying = function() {
+        isPlaying = true;
+      };
+      vasu.onpause = function() {
+        isPlaying = false;
+      };
+      var sami = document.getElementById("sami");
+      var isPlaying = false;
+
+      function sam() {
+        isPlaying ? sami.pause() : sami.play();
+      };
+
+      sami.onplaying = function() {
+        isPlaying = true;
+      };
+      sami.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>

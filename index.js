@@ -16,6 +16,15 @@ app.get("/Jailvakusa",function(req,res){
 app.get("/SarileruNikevvaru",function(req,res){
   res.sendFile(__dirname+"/slnk.html");
 });
+app.get("/BharathAneNenu",function(req,res){
+  res.sendFile(__dirname+"/ban.html");
+});
+app.get("/Srimanthudu",function(req,res){
+  res.sendFile(__dirname+"/smd.html");
+});
+app.get("/TuckJagadish",function(req,res){
+  res.sendFile(__dirname+"/tk.html");
+});
 
 
 app.listen(process.env.PORT||3000,function(){

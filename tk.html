@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TuckJagadish</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="tk/nani.jpg" alt="janatagarage" />
+
+  <h1>TuckJagadish</h1>
+  <audio id="inko" src="tk/Inkosaari Inkosaari.mp3" preload="auto"></audio>
+  <audio id="kolo" src="tk/Kolo Kolanna Kolo_.mp3" preload="auto"></audio>
+  <audio id="needi" src="tk/Needhi Nadhantu.mp3" preload="auto"></audio>
+  <audio id="neeti" src="tk/Neeti Neeti Sukka.mp3" preload="auto"></audio>
+  <audio id="tuck" src="tk/Tuck Song.mp3" preload="auto"></audio>
+  <audio id="yeti" src="tk/Yetikokka Poota.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="ink()">Inkosari<a href="tk/Inkosaari Inkosaari.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="koll()">KoloKolanna<a href="tk/Kolo Kolanna Kolo_.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="need()">NeedhiNadantu<a href="tk/Needhi Nadhantu.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="neet()">NeetiSukka<a href="tk/Neeti Neeti Sukka.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="tuc()">Tuck<a href="music/tk/Tuck Song.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="yet()">YetoOkkaPoota<a href="tk/Yetiokka Poota.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var inko = document.getElementById("inko");
+      var isPlaying = false;
+
+      function ink() {
+        isPlaying ? inko.pause() : inko.play();
+      };
+
+      inko.onplaying = function() {
+        isPlaying = true;
+      };
+      inko.onpause = function() {
+        isPlaying = false;
+      };
+      var kolo = document.getElementById("kolo");
+      var isPlaying = false;
+
+      function koll() {
+        isPlaying ? kolo.pause() : kolo.play();
+      };
+
+      kolo.onplaying = function() {
+        isPlaying = true;
+      };
+      kolo.onpause = function() {
+          isPlaying = false;
+        };
+      var needi = document.getElementById("needi");
+      var isPlaying = false;
+
+      function need() {
+        isPlaying ? needi.pause() : needi.play();
+      };
+
+      needi.onplaying = function() {
+        isPlaying = true;
+      };
+      needi.onpause = function() {
+        isPlaying = false;
+      };
+      var neeti = document.getElementById("neeti");
+      var isPlaying = false;
+
+      function neet() {
+        isPlaying ? neeti.pause() : neeti.play();
+      };
+
+      neeti.onplaying = function() {
+        isPlaying = true;
+      };
+      neeti.onpause = function() {
+        isPlaying = false;
+      };
+      var tuck = document.getElementById("tuck");
+      var isPlaying = false;
+
+      function tuc() {
+        isPlaying ? tuck.pause() : tuck.play();
+      };
+
+      tuck.onplaying = function() {
+        isPlaying = true;
+      };
+      tuck.onpause = function() {
+        isPlaying = false;
+      };
+      var yeti = document.getElementById("yeti");
+      var isPlaying = false;
+
+      function yet() {
+        isPlaying ? yeti.pause() : yeti.play();
+      };
+
+      yeti.onplaying = function() {
+        isPlaying = true;
+      };
+      yeti.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>

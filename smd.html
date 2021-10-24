@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SriManthudu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="smd/mahesh.jpg" alt="janatagarage" />
+
+  <h1>SriManthudu</h1>
+  <audio id="charu" src="smd/Charuseela.mp3" preload="auto"></audio>
+  <audio id="dimma" src="smd/Dhimmathirigae.mp3" preload="auto"></audio>
+  <audio id="jago" src="smd/Jaago.mp3" preload="auto"></audio>
+  <audio id="jata" src="smd/Jatha Kalise.mp3" preload="auto"></audio>
+  <audio id=rama src="smd/Rama Rama.mp3" preload="auto"></audio>
+  <audio id="title" src="smd/Srimanthuda.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="char()">CharuSeela<a href="smd/Charuseela.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="dim()">DhimmaThirige<a href="smd/Dhimmathirigae.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="jag()">Jaago<a href="smd/Jaago.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="jat()">JathaKalise<a href="smd/Jatha Kalise.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="ram()">RamaRama<a href="smd/Rama Rama.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="tit()">SriManthuda<a href="smd/Srimanthuda.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var charu = document.getElementById("charu");
+      var isPlaying = false;
+
+      function char() {
+        isPlaying ? charu.pause() : charu.play();
+      };
+
+      charu.onplaying = function() {
+        isPlaying = true;
+      };
+      charu.onpause = function() {
+        isPlaying = false;
+      };
+      var dimma = document.getElementById("dimma");
+      var isPlaying = false;
+
+      function dim() {
+        isPlaying ? dimma.pause() : dimma.play();
+      };
+
+      dimma.onplaying = function() {
+        isPlaying = true;
+      };
+      dimma.onpause = function() {
+          isPlaying = false;
+        };
+      var jago = document.getElementById("jago");
+      var isPlaying = false;
+
+      function jag() {
+        isPlaying ? jago.pause() : jago.play();
+      };
+
+      jago.onplaying = function() {
+        isPlaying = true;
+      };
+      jago.onpause = function() {
+        isPlaying = false;
+      };
+      var jata = document.getElementById("jata");
+      var isPlaying = false;
+
+      function jat() {
+        isPlaying ? jata.pause() : jata.play();
+      };
+
+      jata.onplaying = function() {
+        isPlaying = true;
+      };
+      jata.onpause = function() {
+        isPlaying = false;
+      };
+      var rama = document.getElementById("rama");
+      var isPlaying = false;
+
+      function ram() {
+        isPlaying ? rama.pause() : rama.play();
+      };
+
+      rama.onplaying = function() {
+        isPlaying = true;
+      };
+      rama.onpause = function() {
+        isPlaying = false;
+      };
+      var title = document.getElementById("title");
+      var isPlaying = false;
+
+      function tit() {
+        isPlaying ? title.pause() : title.play();
+      };
+
+      title.onplaying = function() {
+        isPlaying = true;
+      };
+      title.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>
