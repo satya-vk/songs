@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bahubali2</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="bb1/prabhas.jpg" alt="janatagarage" />
+
+  <h1>Bahubali2</h1>
+  <audio id="dandam" src="bb2/Dandaalayyaa.mp3" preload="auto"></audio>
+  <audio id="bali" src="bb2/Saahore Baahubali.mp3" preload="auto"></audio>
+  <audio id="kanna" src="bb2/Kannaa Nidurinchara.mp3" preload="auto"></audio>
+  <audio id="hamsa" src="bb2/Hamsa Naava.mp3" preload="auto"></audio>
+  <audio id="oka" src="bb2/Oka Praanam.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="danda()">Dandalayya<a href="bb2/Dandaalayyaac.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="bal()">SaahoreBahubali<a href="bb2/Saahore Baahubali.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="kann()">KannaNidurichara<a href="bb2/Kannaa Nidurinchara.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="hams()">HamsaNaava<a href="bb2/Hamsa Naava.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="ok()">OkaPranam<a href="bb2/Oka Praanam.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var dandam = document.getElementById("dandam");
+      var isPlaying = false;
+
+      function danda() {
+        isPlaying ? dandam.pause() : dandam.play();
+      };
+
+      dandam.onplaying = function() {
+        isPlaying = true;
+      };
+      dandam.onpause = function() {
+        isPlaying = false;
+      };
+      var bali = document.getElementById("bali");
+      var isPlaying = false;
+
+      function bal() {
+        isPlaying ? bali.pause() : bali.play();
+      };
+
+      bali.onplaying = function() {
+        isPlaying = true;
+      };
+      bali.onpause = function() {
+          isPlaying = false;
+        };
+      var kanna = document.getElementById("kanna");
+      var isPlaying = false;
+
+      function kann() {
+        isPlaying ? kanna.pause() : kanna.play();
+      };
+
+      kanna.onplaying = function() {
+        isPlaying = true;
+      };
+      kanna.onpause = function() {
+        isPlaying = false;
+      };
+      var hamsa = document.getElementById("hamsa");
+      var isPlaying = false;
+
+      function hams() {
+        isPlaying ? hamsa.pause() : hamsa.play();
+      };
+
+      hamsa.onplaying = function() {
+        isPlaying = true;
+      };
+      hamsa.onpause = function() {
+        isPlaying = false;
+      };
+      var oka = document.getElementById("oka");
+      var isPlaying = false;
+
+      function ok() {
+        isPlaying ? oka.pause() : oka.play();
+      };
+
+      oka.onplaying = function() {
+        isPlaying = true;
+      };
+      oka.onpause = function() {
+        isPlaying = false;
+      };
+    </script>
+
+</body>
+
+</html>

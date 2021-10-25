@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>BaleBaleMagadivoy</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="blbm/Nani.jpg" alt="janatagarage" />
+
+  <h1>TuckJagadish</h1>
+  <audio id="bale" src="blbm/Bale Bale.mp3" preload="auto"></audio>
+  <audio id="endaro" src="blbm/Endaro.mp3" preload="auto"></audio>
+  <audio id="Hello" src="blbm/Hello Hello.mp3" preload="auto"></audio>
+  <audio id="motta" src="blbm/Motta Modatisari.mp3" preload="auto"></audio>
+  <audio id="how" src="blbm/How How.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="bal()">BaleBale<a href="blbm/Bale Bale.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="endar()">Endaro<a href="blbm/Endaro.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="Hell()">HelloHello<a href="blbm/Hello Hello.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="mott()">MottModatisari<a href="blbm/Motta Modatisari.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="hw()">HowHow<a href="blbm/How How.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var bale = document.getElementById("bale");
+      var isPlaying = false;
+
+      function bal() {
+        isPlaying ? bale.pause() : bale.play();
+      };
+
+      bale.onplaying = function() {
+        isPlaying = true;
+      };
+      bale.onpause = function() {
+        isPlaying = false;
+      };
+      var endaro = document.getElementById("endaro");
+      var isPlaying = false;
+
+      function endar() {
+        isPlaying ? endaro.pause() : endaro.play();
+      };
+
+      endaro.onplaying = function() {
+        isPlaying = true;
+      };
+      endaro.onpause = function() {
+          isPlaying = false;
+        };
+      var Hello = document.getElementById("Hello");
+      var isPlaying = false;
+
+      function Hell() {
+        isPlaying ? Hello.pause() : Hello.play();
+      };
+
+      Hello.onplaying = function() {
+        isPlaying = true;
+      };
+      Hello.onpause = function() {
+        isPlaying = false;
+      };
+      var motta = document.getElementById("motta");
+      var isPlaying = false;
+
+      function mott() {
+        isPlaying ? motta.pause() : motta.play();
+      };
+
+      motta.onplaying = function() {
+        isPlaying = true;
+      };
+      motta.onpause = function() {
+        isPlaying = false;
+      };
+      var how = document.getElementById("how");
+      var isPlaying = false;
+
+      function hw() {
+        isPlaying ? how.pause() : how.play();
+      };
+
+      how.onplaying = function() {
+        isPlaying = true;
+      };
+      how.onpause = function() {
+        isPlaying = false;
+      };
+    </script>
+
+</body>
+
+</html>

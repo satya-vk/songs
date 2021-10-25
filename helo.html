@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Hello</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="helo/akhil.jpg" alt="janatagarage" />
+
+  <h1>Hello</h1>
+  <audio id="hello" src="helo/Hello.mp3" preload="auto"></audio>
+  <audio id="anaga" src="helo/Anaganaga Oka Uru.mp3" preload="auto"></audio>
+  <audio id="merise" src="helo/Merise Merise.mp3" preload="auto"></audio>
+  <audio id="talachi" src="helo/Thalachi Thalachi.mp3" preload="auto"></audio>
+  <audio id="yevo" src="helo/Yevevo.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="hell()">Hello<a href="helo/Hello.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="anag()">AnaganagaOkaUru<a href="helo/Anaganaga Oka Uru.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="meris()">MeriseMerise<a href="helo/Merise Merise.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="talach()">ThalachiThalachi<a href="helo/Thalachi Thalachi.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="yev()">Yevevo<a href="helo/Yevevo.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var hello = document.getElementById("hello");
+      var isPlaying = false;
+
+      function hell() {
+        isPlaying ? hello.pause() : hello.play();
+      };
+
+      hello.onplaying = function() {
+        isPlaying = true;
+      };
+      hello.onpause = function() {
+        isPlaying = false;
+      };
+      var anaga = document.getElementById("anaga");
+      var isPlaying = false;
+
+      function anag() {
+        isPlaying ? anaga.pause() : anaga.play();
+      };
+
+      anaga.onplaying = function() {
+        isPlaying = true;
+      };
+      anaga.onpause = function() {
+          isPlaying = false;
+        };
+      var merise = document.getElementById("merise");
+      var isPlaying = false;
+
+      function meris() {
+        isPlaying ? merise.pause() : merise.play();
+      };
+
+      merise.onplaying = function() {
+        isPlaying = true;
+      };
+      merise.onpause = function() {
+        isPlaying = false;
+      };
+      var talachi = document.getElementById("talachi");
+      var isPlaying = false;
+
+      function talach() {
+        isPlaying ? talachi.pause() : talachi.play();
+      };
+
+      talachi.onplaying = function() {
+        isPlaying = true;
+      };
+      talachi.onpause = function() {
+        isPlaying = false;
+      };
+      var yevo = document.getElementById("yevo");
+      var isPlaying = false;
+
+      function yev() {
+        isPlaying ? yevo.pause() : yevo.play();
+      };
+
+      yevo.onplaying = function() {
+        isPlaying = true;
+      };
+      yevo.onpause = function() {
+        isPlaying = false;
+      };
+    </script>
+
+</body>
+
+</html>

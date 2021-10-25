@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Akhil</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="akl/akhil.jpg" alt="janatagarage" />
+
+  <h1>Akhil</h1>
+  <audio id="akki" src="akl/Akkineni Akkineni.mp3" preload="auto"></audio>
+  <audio id="hey" src="akl/Hey Akhil.mp3" preload="auto"></audio>
+  <audio id="nenu" src="akl/Nennekkadunte.mp3" preload="auto"></audio>
+  <audio id="pada" src="akl/Padessavae.mp3" preload="auto"></audio>
+  <audio id="zara" src="akl/Zara Zara Navvaradhe.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="akk()">Akkineni<a href="akl/Akkineni Akkineni.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="he()">HeyAkhil<a href="akl/Hey Akhil.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="nen()">Nenekkadunte<a href="akl/Nennekkadunte.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="pad()">Padessave<a href="akl/Padessavae.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="zar()">ZaraZaraNavvaradey<a href="akl/Zara Zara Navvaradhe.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var akki = document.getElementById("akki");
+      var isPlaying = false;
+
+      function akk() {
+        isPlaying ? akki.pause() : akki.play();
+      };
+
+      akki.onplaying = function() {
+        isPlaying = true;
+      };
+      akki.onpause = function() {
+        isPlaying = false;
+      };
+      var hey = document.getElementById("hey");
+      var isPlaying = false;
+
+      function he() {
+        isPlaying ? hey.pause() : hey.play();
+      };
+
+      hey.onplaying = function() {
+        isPlaying = true;
+      };
+      hey.onpause = function() {
+          isPlaying = false;
+        };
+      var nenu = document.getElementById("nenu");
+      var isPlaying = false;
+
+      function nen() {
+        isPlaying ? nenu.pause() : nenu.play();
+      };
+
+      nenu.onplaying = function() {
+        isPlaying = true;
+      };
+      nenu.onpause = function() {
+        isPlaying = false;
+      };
+      var pada = document.getElementById("pada");
+      var isPlaying = false;
+
+      function pad() {
+        isPlaying ? pada.pause() : pada.play();
+      };
+
+      pada.onplaying = function() {
+        isPlaying = true;
+      };
+      pada.onpause = function() {
+        isPlaying = false;
+      };
+      var zara = document.getElementById("zara");
+      var isPlaying = false;
+
+      function zar() {
+        isPlaying ? zara.pause() : zara.play();
+      };
+
+      zara.onplaying = function() {
+        isPlaying = true;
+      };
+      zara.onpause = function() {
+        isPlaying = false;
+      };
+    </script>
+
+</body>
+
+</html>

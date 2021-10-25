@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bahubali1</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="bb1/prabhas.jpg" alt="janatagarage" />
+
+  <h1>TuckJagadish</h1>
+  <audio id="deera" src="bb1/Dheevara.mp3" preload="auto"></audio>
+  <audio id="jeevam" src="bb1/Jeevanadi.mp3" preload="auto"></audio>
+  <audio id="bottu" src="bb1/Pachcha Bottesi.mp3" preload="auto"></audio>
+  <audio id="nippu" src="bb1/Nippule Swasaga.mp3" preload="auto"></audio>
+  <audio id="anaa" src="bb1/Sivuni Aana.mp3" preload="auto"></audio>
+  <audio id="mama" src="bb1/Mamathala Thalli.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="deer()">Dheevara<a href="bb1/Dheevara.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="jeeva()">Jeevanadi<a href="bb1/Jeevanadi.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="bott()">PacchaBottesi<a href="bb1/Pachcha Bottesi.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="nipp()">NippuleAwasaga<a href="bb1/Nippule Swasaga.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="ana()">SivuniAana<a href="bb1/Sivuni Aana.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="mam()">Mamatalathalli<a href="bb1/Mamathala Thalli.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var deera = document.getElementById("deera");
+      var isPlaying = false;
+
+      function deer() {
+        isPlaying ? deera.pause() : deera.play();
+      };
+
+      deera.onplaying = function() {
+        isPlaying = true;
+      };
+      deera.onpause = function() {
+        isPlaying = false;
+      };
+      var jeevam = document.getElementById("jeevam");
+      var isPlaying = false;
+
+      function jeeva() {
+        isPlaying ? jeevam.pause() : jeevam.play();
+      };
+
+      jeevam.onplaying = function() {
+        isPlaying = true;
+      };
+      jeevam.onpause = function() {
+          isPlaying = false;
+        };
+      var bottu = document.getElementById("bottu");
+      var isPlaying = false;
+
+      function bott() {
+        isPlaying ? bottu.pause() : bottu.play();
+      };
+
+      bottu.onplaying = function() {
+        isPlaying = true;
+      };
+      bottu.onpause = function() {
+        isPlaying = false;
+      };
+      var nippu = document.getElementById("nippu");
+      var isPlaying = false;
+
+      function nipp() {
+        isPlaying ? nippu.pause() : nippu.play();
+      };
+
+      nippu.onplaying = function() {
+        isPlaying = true;
+      };
+      nippu.onpause = function() {
+        isPlaying = false;
+      };
+      var anaa = document.getElementById("anaa");
+      var isPlaying = false;
+
+      function ana() {
+        isPlaying ? anaa.pause() : anaa.play();
+      };
+
+      anaa.onplaying = function() {
+        isPlaying = true;
+      };
+      anaa.onpause = function() {
+        isPlaying = false;
+      };
+      var mama = document.getElementById("mama");
+      var isPlaying = false;
+
+      function mam() {
+        isPlaying ? mama.pause() : mama.play();
+      };
+
+      mama.onplaying = function() {
+        isPlaying = true;
+      };
+      mama.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>

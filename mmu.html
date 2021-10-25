@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>MrMajnu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="mmu/akhil.jpg" alt="janatagarage" />
+
+  <h1>MrMajnu</h1>
+  <audio id="hey" src="mmu/Hey Nenila.mp3" preload="auto"></audio>
+  <audio id="koppa" src="mmu/Koppamga Koppamga.mp3" preload="auto"></audio>
+  <audio id="maju" src="mmu/MrMajnu.mp3" preload="auto"></audio>
+  <audio id="nalo" src="mmu/Naalo Neeku.mp3" preload="auto"></audio>
+  <audio id="yemo" src="mmu/Yemainado.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="he()">HeyNenila<a href="mmu/Hey Nenila.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="kopp()">KopamgaKopamga<a href="mmu/Koppamga Koppamga.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="maj()">MrMajnu<a href="mmu/MrMajnu.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="nal()">NaaloNeeku<a href="mmu/Naalo Neeku.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="yem()">Yemaindo<a href="mmu/Yemainado.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var hey = document.getElementById("hey");
+      var isPlaying = false;
+
+      function he() {
+        isPlaying ? hey.pause() : hey.play();
+      };
+
+      hey.onplaying = function() {
+        isPlaying = true;
+      };
+      hey.onpause = function() {
+        isPlaying = false;
+      };
+      var koppa = document.getElementById("koppa");
+      var isPlaying = false;
+
+      function kopp() {
+        isPlaying ? koppa.pause() : koppa.play();
+      };
+
+      koppa.onplaying = function() {
+        isPlaying = true;
+      };
+      koppa.onpause = function() {
+          isPlaying = false;
+        };
+      var maju = document.getElementById("maju");
+      var isPlaying = false;
+
+      function maj() {
+        isPlaying ? maju.pause() : maju.play();
+      };
+
+      maju.onplaying = function() {
+        isPlaying = true;
+      };
+      maju.onpause = function() {
+        isPlaying = false;
+      };
+      var nalo = document.getElementById("nalo");
+      var isPlaying = false;
+
+      function nal() {
+        isPlaying ? nalo.pause() : nalo.play();
+      };
+
+      nalo.onplaying = function() {
+        isPlaying = true;
+      };
+      nalo.onpause = function() {
+        isPlaying = false;
+      };
+      var yemo = document.getElementById("yemo");
+      var isPlaying = false;
+
+      function yem() {
+        isPlaying ? yemo.pause() : yemo.play();
+      };
+
+      yemo.onplaying = function() {
+        isPlaying = true;
+      };
+      yemo.onpause = function() {
+        isPlaying = false;
+      };
+    </script>
+
+</body>
+
+</html>

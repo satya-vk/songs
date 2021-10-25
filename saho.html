@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Saaho</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="sho/prabhas.jpg" alt="janatagarage" />
+
+  <h1>Saaho</h1>
+  <audio id="bang" src="sho/Saaho Bang.mp3" preload="auto"></audio>
+  <audio id="sycho" src="sho/Psycho Saiyaan.mp3" preload="auto"></audio>
+  <audio id="chota" src="sho/Ye Chota Nuvvunna.mp3" preload="auto"></audio>
+  <audio id="bad" src="sho/Bad Boy.mp3" preload="auto"></audio>
+  <audio id="baby" src="sho/Baby Won't You Tell Me.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="ban()">Bang<a href="tk/sho/Saaho Bang.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="sych()">PsychoSariyan<a href="sho/Psycho Sariyaan.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="chot()">YeChotaNuvvunna<a href="sho/Ye Chota Nuvvunna.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="ba()">BadBoy<a href="tk/sho/Bad Boy.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="bab()">BabyWontYouTellMe<a href="sho/Baby Won't You Tell Me.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var bang = document.getElementById("bang");
+      var isPlaying = false;
+
+      function ban() {
+        isPlaying ? bang.pause() : bang.play();
+      };
+
+      bang.onplaying = function() {
+        isPlaying = true;
+      };
+      bang.onpause = function() {
+        isPlaying = false;
+      };
+      var sycho = document.getElementById("sycho");
+      var isPlaying = false;
+
+      function sych() {
+        isPlaying ? sycho.pause() : sycho.play();
+      };
+
+      sycho.onplaying = function() {
+        isPlaying = true;
+      };
+      sycho.onpause = function() {
+          isPlaying = false;
+        };
+      var chota = document.getElementById("chota");
+      var isPlaying = false;
+
+      function chot() {
+        isPlaying ? chota.pause() : chota.play();
+      };
+
+      chota.onplaying = function() {
+        isPlaying = true;
+      };
+      chota.onpause = function() {
+        isPlaying = false;
+      };
+      var bad = document.getElementById("bad");
+      var isPlaying = false;
+
+      function ba() {
+        isPlaying ? bad.pause() : bad.play();
+      };
+
+      bad.onplaying = function() {
+        isPlaying = true;
+      };
+      bad.onpause = function() {
+        isPlaying = false;
+      };
+      var baby = document.getElementById("baby");
+      var isPlaying = false;
+
+      function bab() {
+        isPlaying ? baby.pause() : baby.play();
+      };
+
+      baby.onplaying = function() {
+        isPlaying = true;
+      };
+      baby.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>

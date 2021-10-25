@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>V</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img class="logo" src="vm/Nani.jpg" alt="Nani" />
+
+  <h1>V</h1>
+  <audio id="baby" src="vm/Baby Touch Me Now.mp3" preload="auto"></audio>
+  <audio id="manasu" src="vm/Manasu Maree.mp3" preload="auto"></audio>
+  <audio id="ranga" src="vm/Ranga Rangeli.mp3" preload="auto"></audio>
+  <audio id="come" src="vm/Vasthunnaa Vachestunna.mp3" preload="auto"></audio>
+  <div class="links">
+    <div class="events" onClick="bab()">BabyTouchMe<a href="vm/Baby Touch Me Now.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="manas()">MnasuMaree<a href="vm/Manasu Maree.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="rang()">RangaRangeli<a href="vm/Ranga Rangeli.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="com()">Vaccustunna<a href="vm/Vasthunna Vachestunna.mp3"download><i class="fa fa-download"></i></a></div>
+  </div>
+  <footer>
+      <p>&copy;satyaVk</p>
+    </footer>
+    <script>
+      var baby = document.getElementById("baby");
+      var isPlaying = false;
+
+      function bab() {
+        isPlaying ? baby.pause() : baby.play();
+      };
+
+      baby.onplaying = function() {
+        isPlaying = true;
+      };
+      baby.onpause = function() {
+        isPlaying = false;
+      };
+      var manasu = document.getElementById("manasu");
+      var isPlaying = false;
+
+      function manas() {
+        isPlaying ? manasu.pause() : manasu.play();
+      };
+
+      manasu.onplaying = function() {
+        isPlaying = true;
+      };
+      manasu.onpause = function() {
+          isPlaying = false;
+        };
+      var ranga = document.getElementById("ranga");
+      var isPlaying = false;
+
+      function rang() {
+        isPlaying ? ranga.pause() : ranga.play();
+      };
+
+      ranga.onplaying = function() {
+        isPlaying = true;
+      };
+      ranga.onpause = function() {
+        isPlaying = false;
+      };
+      var come = document.getElementById("come");
+      var isPlaying = false;
+
+      function com() {
+        isPlaying ? come.pause() : come.play();
+      };
+
+      come.onplaying = function() {
+        isPlaying = true;
+      };
+      come.onpause = function() {
+        isPlaying = false;
+      };
+
+    </script>
+
+</body>
+
+</html>

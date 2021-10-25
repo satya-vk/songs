@@ -25,6 +25,31 @@ app.get("/Srimanthudu",function(req,res){
 app.get("/TuckJagadish",function(req,res){
   res.sendFile(__dirname+"/tk.html");
 });
+app.get("/V",function(req,res){
+  res.sendFile(__dirname+"/v.html");
+});
+app.get("/BaleBaleMagadivoy",function(req,res){
+  res.sendFile(__dirname+"/blbm.html");
+});
+app.get("/bahubali2",function(req,res){
+  res.sendFile(__dirname+"/bahuc.html");
+});
+app.get("/bahubali1",function(req,res){
+  res.sendFile(__dirname+"/bahub.html");
+});
+app.get("/akhil",function(req,res){
+  res.sendFile(__dirname+"/akl.html");
+});
+app.get("/mrmajnu",function(req,res){
+  res.sendFile(__dirname+"/mmu.html");
+});
+app.get("/hello",function(req,res){
+  res.sendFile(__dirname+"/helo.html");
+});
+
+
+
+
 
 
 app.listen(process.env.PORT||3000,function(){
