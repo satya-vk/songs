@@ -4,6 +4,13 @@ app.use(express.static("public"));
 app.get("/",function(req,res){
   res.sendFile(__dirname+"/index.html");
 });
+app.get("/rr",function(req,res){
+  res.sendFile(__dirname+"/rr.html");
+});
+app.get("/rrr",function(req,res){
+  res.sendFile(__dirname+"/rrr.html");
+});
+
 app.get("/Janatagarege",function(req,res){
   res.sendFile(__dirname+"/janata.html");
 });
