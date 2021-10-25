@@ -31,6 +31,9 @@ app.get("/V",function(req,res){
 app.get("/BaleBaleMagadivoy",function(req,res){
   res.sendFile(__dirname+"/blbm.html");
 });
+app.get("/saho",function(req,res){
+  res.sendFile(__dirname+"/saho.html");
+});
 app.get("/bahubali2",function(req,res){
   res.sendFile(__dirname+"/bahuc.html");
 });
