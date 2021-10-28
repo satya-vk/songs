@@ -18,10 +18,10 @@ h1{
 .events{
   display:block;
   text-align: center;
-  font-size:2rem;
-  padding:2% 1%;
+  font-size:1rem;
   font-weight:bold;
-  color:blue;
+  margin-top:25px;
+  color:#228B22;
 }
 .events:hover{
   text-decoration: underline;
