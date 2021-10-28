@@ -13,12 +13,12 @@
   <img class="logo" src="jlka/ntr.jpg" alt="janatagarage" />
 
   <h1>JaiLavakusa</h1>
-  <audio id="Ravana" src="jlka/Raavana.mp3" preload="auto"></audio>
-  <audio id="Tring" src="jlka/Tring Tring.mp3" preload="auto"></audio>
-  <audio id="Dochesta" src="jlka/Dochestha.mp3" preload="auto"></audio>
-  <audio id="kalla" src="jlka/Nee Kallalona.mp3" preload="auto"></audio>
-  <audio id="zara" src="jlka/Swing Zara.mp3" preload="auto"></audio>
-  <audio id="lokam" src="jlka/Andamaina Lokam.mp3" preload="auto"></audio>
+  <audio id="Ravana" loop src="jlka/Raavana.mp3" preload="auto"></audio>
+  <audio id="Tring" loop src="jlka/Tring Tring.mp3" preload="auto"></audio>
+  <audio id="Dochesta" loop src="jlka/Dochestha.mp3" preload="auto"></audio>
+  <audio id="kalla" loop src="jlka/Nee Kallalona.mp3" preload="auto"></audio>
+  <audio id="zara" loop src="jlka/Swing Zara.mp3" preload="auto"></audio>
+  <audio id="lokam" loop src="jlka/Andamaina Lokam.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="ravan()">Ravana<a href="jlka/Raavana.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="trin()">TrinTring<a href="jlka/Tring Tring.mp3"download><i class="fa fa-download"></i></a></div>
@@ -31,85 +31,42 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var Ravana = document.getElementById("Ravana");
-      var isPlaying = false;
-
+    var Ravana = document.getElementById("Ravana");
       function ravan() {
-        isPlaying ? Ravana.pause() : Ravana.play();
-      };
-
-      Ravana.onplaying = function() {
-        isPlaying = true;
-      };
-      Ravana.onpause = function() {
-        isPlaying = false;
+        return Ravana.paused ? Ravana.play() : Ravana.pause();
       };
       var Tring = document.getElementById("Tring");
-      var isPlaying = false;
 
       function trin() {
-        isPlaying ? Tring.pause() : Tring.play();
+        return Tring.paused ? Tring.play() : Tring.pause();
       };
-
-      Tring.onplaying = function() {
-        isPlaying = true;
-      };
-      Tring.onpause = function() {
-          isPlaying = false;
-        };
       var Dochesta = document.getElementById("Dochesta");
-      var isPlaying = false;
 
       function dochet() {
-        isPlaying ? Dochesta.pause() : Dochesta.play();
-      };
-
-      Dochesta.onplaying = function() {
-        isPlaying = true;
-      };
-      Dochesta.onpause = function() {
-        isPlaying = false;
+        return Dochesta.paused ? Dochesta.play() : Dochesta.pause();
       };
       var kalla = document.getElementById("kalla");
-      var isPlaying = false;
 
       function eyes() {
-        isPlaying ? kalla.pause() : kalla.play();
-      };
-
-      kalla.onplaying = function() {
-        isPlaying = true;
-      };
-      kalla.onpause = function() {
-        isPlaying = false;
+        return kalla.paused ? kalla.play() : kalla.pause();
       };
       var zara = document.getElementById("zara");
-      var isPlaying = false;
-
       function zar() {
-        isPlaying ? zara.pause() : zara.play();
-      };
-
-      zara.onplaying = function() {
-        isPlaying = true;
-      };
-      zara.onpause = function() {
-        isPlaying = false;
+        return zara.paused ? zara.play() : zara.pause();
       };
       var lokam = document.getElementById("lokam");
-      var isPlaying = false;
-
       function lkm() {
-        isPlaying ? lokam.pause() : lokam.play();
+        return lokam.paused ? lokam.play() : lokam.pause();
       };
-
-      lokam.onplaying = function() {
-        isPlaying = true;
-      };
-      lokam.onpause = function() {
-        isPlaying = false;
-      };
-
+      document.addEventListener('play', function(e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            console.log(audios[i]);
+            audios[i].pause();
+          }
+        }
+      }, true);
     </script>
 
 </body>

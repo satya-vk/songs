@@ -13,89 +13,57 @@
   <img class="logo" src="sho/prabhas.jpg" alt="janatagarage" />
 
   <h1>Saaho</h1>
-  <audio id="bang" src="sho/Saaho Bang.mp3" preload="auto"></audio>
-  <audio id="sycho" src="sho/Psycho Saiyaan.mp3" preload="auto"></audio>
-  <audio id="chota" src="sho/Ye Chota Nuvvunna.mp3" preload="auto"></audio>
-  <audio id="bad" src="sho/Bad Boy.mp3" preload="auto"></audio>
-  <audio id="baby" src="sho/Baby Won't You Tell Me.mp3" preload="auto"></audio>
+  <audio id="bang" loop src="sho/Saaho Bang.mp3" preload="auto"></audio>
+  <audio id="sycho" loop src="sho/Psycho Saiyaan.mp3" preload="auto"></audio>
+  <audio id="chota" loop src="sho/Ye Chota Nuvvunna.mp3" preload="auto"></audio>
+  <audio id="bad" loop src="sho/Bad Boy.mp3" preload="auto"></audio>
+  <audio id="baby" loop src="sho/Baby Won't You Tell Me.mp3" preload="auto"></audio>
   <div class="links">
-    <div class="events" onClick="ban()">Bang<a href="tk/sho/Saaho Bang.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="sych()">PsychoSariyan<a href="sho/Psycho Sariyaan.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="chot()">YeChotaNuvvunna<a href="sho/Ye Chota Nuvvunna.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="ba()">BadBoy<a href="tk/sho/Bad Boy.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="bab()">BabyWontYouTellMe<a href="sho/Baby Won't You Tell Me.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="ban()">Bang<a href="tk/sho/Saaho Bang.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="sych()">PsychoSariyan<a href="sho/Psycho Sariyaan.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="chot()">YeChotaNuvvunna<a href="sho/Ye Chota Nuvvunna.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="ba()">BadBoy<a href="tk/sho/Bad Boy.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="bab()">BabyWontYouTellMe<a href="sho/Baby Won't You Tell Me.mp3" download><i class="fa fa-download"></i></a></div>
   </div>
   <footer>
-      <p>&copy;satyaVk</p>
-    </footer>
-    <script>
-      var bang = document.getElementById("bang");
-      var isPlaying = false;
+    <p>&copy;satyaVk</p>
+  </footer>
+  <script>
+    var bang = document.getElementById("bang");
 
-      function ban() {
-        isPlaying ? bang.pause() : bang.play();
-      };
+    function ban() {
+      return bang.paused ? bang.play() : bang.pause();
+    };
+    var sycho = document.getElementById("sycho");
 
-      bang.onplaying = function() {
-        isPlaying = true;
-      };
-      bang.onpause = function() {
-        isPlaying = false;
-      };
-      var sycho = document.getElementById("sycho");
-      var isPlaying = false;
+    function sych() {
+      return sycho.paused ? sycho.play() : sycho.pause();
+    };
+    var chota = document.getElementById("chota");
 
-      function sych() {
-        isPlaying ? sycho.pause() : sycho.play();
-      };
+    function chot() {
+      return chota.paused ? chota.play() : chota.pause();
+    };
+    var bad = document.getElementById("bad");
 
-      sycho.onplaying = function() {
-        isPlaying = true;
-      };
-      sycho.onpause = function() {
-          isPlaying = false;
-        };
-      var chota = document.getElementById("chota");
-      var isPlaying = false;
+    function ba() {
+      return bad.paused ? bad.play() : bad.pause();
+    };
+    var baby = document.getElementById("baby");
 
-      function chot() {
-        isPlaying ? chota.pause() : chota.play();
-      };
-
-      chota.onplaying = function() {
-        isPlaying = true;
-      };
-      chota.onpause = function() {
-        isPlaying = false;
-      };
-      var bad = document.getElementById("bad");
-      var isPlaying = false;
-
-      function ba() {
-        isPlaying ? bad.pause() : bad.play();
-      };
-
-      bad.onplaying = function() {
-        isPlaying = true;
-      };
-      bad.onpause = function() {
-        isPlaying = false;
-      };
-      var baby = document.getElementById("baby");
-      var isPlaying = false;
-
-      function bab() {
-        isPlaying ? baby.pause() : baby.play();
-      };
-
-      baby.onplaying = function() {
-        isPlaying = true;
-      };
-      baby.onpause = function() {
-        isPlaying = false;
-      };
-
-    </script>
+    function bab() {
+      return baby.paused ? baby.play() : baby.pause();
+    };
+    document.addEventListener('play', function(e) {
+      var audios = document.getElementsByTagName('audio');
+      for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+          console.log(audios[i]);
+          audios[i].pause();
+        }
+      }
+    }, true);
+  </script>
 
 </body>
 

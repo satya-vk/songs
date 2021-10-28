@@ -13,10 +13,10 @@
   <img class="logo" src="vm/Nani.jpg" alt="Nani" />
 
   <h1>V</h1>
-  <audio id="baby" src="vm/Baby Touch Me Now.mp3" preload="auto"></audio>
-  <audio id="manasu" src="vm/Manasu Maree.mp3" preload="auto"></audio>
-  <audio id="ranga" src="vm/Ranga Rangeli.mp3" preload="auto"></audio>
-  <audio id="come" src="vm/Vasthunnaa Vachestunna.mp3" preload="auto"></audio>
+  <audio id="baby" loop src="vm/Baby Touch Me Now.mp3" preload="auto"></audio>
+  <audio id="manasu" loop src="vm/Manasu Maree.mp3" preload="auto"></audio>
+  <audio id="ranga" loop src="vm/Ranga Rangeli.mp3" preload="auto"></audio>
+  <audio id="come" loop src="vm/Vasthunnaa Vachestunna.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="bab()">BabyTouchMe<a href="vm/Baby Touch Me Now.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="manas()">MnasuMaree<a href="vm/Manasu Maree.mp3"download><i class="fa fa-download"></i></a></div>
@@ -27,58 +27,35 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var baby = document.getElementById("baby");
-      var isPlaying = false;
+    var baby = document.getElementById("baby");
 
-      function bab() {
-        isPlaying ? baby.pause() : baby.play();
-      };
+    function bab() {
+      return baby.paused ? baby.play() : baby.pause();
+    };
+    var manasu = document.getElementById("manasu");
 
-      baby.onplaying = function() {
-        isPlaying = true;
-      };
-      baby.onpause = function() {
-        isPlaying = false;
-      };
-      var manasu = document.getElementById("manasu");
-      var isPlaying = false;
+    function manas() {
+      return manasu.paused ? manasu.play() : manasu.pause();
+    };
+    var ranga = document.getElementById("ranga");
 
-      function manas() {
-        isPlaying ? manasu.pause() : manasu.play();
-      };
+    function rang() {
+      return ranga.paused ? ranga.play() : ranga.pause();
+    };
+    var come = document.getElementById("come");
 
-      manasu.onplaying = function() {
-        isPlaying = true;
-      };
-      manasu.onpause = function() {
-          isPlaying = false;
-        };
-      var ranga = document.getElementById("ranga");
-      var isPlaying = false;
-
-      function rang() {
-        isPlaying ? ranga.pause() : ranga.play();
-      };
-
-      ranga.onplaying = function() {
-        isPlaying = true;
-      };
-      ranga.onpause = function() {
-        isPlaying = false;
-      };
-      var come = document.getElementById("come");
-      var isPlaying = false;
-
-      function com() {
-        isPlaying ? come.pause() : come.play();
-      };
-
-      come.onplaying = function() {
-        isPlaying = true;
-      };
-      come.onpause = function() {
-        isPlaying = false;
-      };
+    function com() {
+      return come.paused ? come.play() : come.pause();
+    };
+    document.addEventListener('play', function(e) {
+      var audios = document.getElementsByTagName('audio');
+      for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+          console.log(audios[i]);
+          audios[i].pause();
+        }
+      }
+    }, true);
 
     </script>
 

@@ -13,11 +13,11 @@
   <img class="logo" src="blbm/Nani.jpg" alt="janatagarage" />
 
   <h1>BaleBaleMagadivoy</h1>
-  <audio id="bale" src="blbm/Bale Bale.mp3" preload="auto"></audio>
-  <audio id="endaro" src="blbm/Endaro.mp3" preload="auto"></audio>
-  <audio id="Hello" src="blbm/Hello Hello.mp3" preload="auto"></audio>
-  <audio id="motta" src="blbm/Motta Modatisari.mp3" preload="auto"></audio>
-  <audio id="how" src="blbm/How How.mp3" preload="auto"></audio>
+  <audio id="bale" loop src="blbm/Bale Bale.mp3" preload="auto"></audio>
+  <audio id="endaro" loop src="blbm/Endaro.mp3" preload="auto"></audio>
+  <audio id="Hello" loop src="blbm/Hello Hello.mp3" preload="auto"></audio>
+  <audio id="motta" loop src="blbm/Motta Modatisari.mp3" preload="auto"></audio>
+  <audio id="how" loop src="blbm/How How.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="bal()">BaleBale<a href="blbm/Bale Bale.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="endar()">Endaro<a href="blbm/Endaro.mp3"download><i class="fa fa-download"></i></a></div>
@@ -29,71 +29,38 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var bale = document.getElementById("bale");
-      var isPlaying = false;
-
+    var bale = document.getElementById("bale");
       function bal() {
-        isPlaying ? bale.pause() : bale.play();
-      };
-
-      bale.onplaying = function() {
-        isPlaying = true;
-      };
-      bale.onpause = function() {
-        isPlaying = false;
+        return bale.paused ? bale.play() : bale.pause();
       };
       var endaro = document.getElementById("endaro");
-      var isPlaying = false;
 
       function endar() {
-        isPlaying ? endaro.pause() : endaro.play();
+        return endaro.paused ? endaro.play() : endaro.pause();
       };
-
-      endaro.onplaying = function() {
-        isPlaying = true;
-      };
-      endaro.onpause = function() {
-          isPlaying = false;
-        };
       var Hello = document.getElementById("Hello");
-      var isPlaying = false;
 
       function Hell() {
-        isPlaying ? Hello.pause() : Hello.play();
-      };
-
-      Hello.onplaying = function() {
-        isPlaying = true;
-      };
-      Hello.onpause = function() {
-        isPlaying = false;
+        return Hello.paused ? Hello.play() : Hello.pause();
       };
       var motta = document.getElementById("motta");
-      var isPlaying = false;
 
       function mott() {
-        isPlaying ? motta.pause() : motta.play();
-      };
-
-      motta.onplaying = function() {
-        isPlaying = true;
-      };
-      motta.onpause = function() {
-        isPlaying = false;
+        return motta.paused ? motta.play() : motta.pause();
       };
       var how = document.getElementById("how");
-      var isPlaying = false;
-
       function hw() {
-        isPlaying ? how.pause() : how.play();
+        return how.paused ? how.play() : how.pause();
       };
-
-      how.onplaying = function() {
-        isPlaying = true;
-      };
-      how.onpause = function() {
-        isPlaying = false;
-      };
+      document.addEventListener('play', function(e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            console.log(audios[i]);
+            audios[i].pause();
+          }
+        }
+      }, true);
     </script>
 
 </body>

@@ -13,14 +13,14 @@
   <img class="logo" src="images/Janathagarege.jpg" alt="janatagarage" />
 
   <h1>Janathagarege</h1>
-  <audio id="pranamam" src="music/Pranaamam.mp3" preload="auto"></audio>
-  <audio id="Apple" src="music/Apple Beauty.mp3" preload="auto"></audio>
-  <audio id="jayahoJanatha" src="music/Jayaho Janatha.mp3" preload="auto"></audio>
-  <audio id="Rock" src="music/Rock On Bro.mp3" preload="auto"></audio>
-  <audio id="local" src="music/Pakka Local.mp3" preload="auto"></audio>
-  <audio id="selavu" src="music/Nee Selavadigi.mp3" preload="auto"></audio>
+  <audio id="pranamam" loop src="music/Pranaamam.mp3" preload="auto"></audio>
+  <audio id="Apple" loop src="music/Apple Beauty.mp3" preload="auto"></audio>
+  <audio id="jayahoJanatha" loop src="music/Jayaho Janatha.mp3" preload="auto"></audio>
+  <audio id="Rock" loop src="music/Rock On Bro.mp3" preload="auto"></audio>
+  <audio id="local" loop src="music/Pakka Local.mp3" preload="auto"></audio>
+  <audio id="selavu" loop src="music/Nee Selavadigi.mp3" preload="auto"></audio>
   <div class="links">
-    <div class="events" onClick="togglePlay()">Pranamam<a href="music/Pranaamam.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="pranama()">Pranamam<a href="music/Pranaamam.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="apple()">Apple beauty<a href="music/Apple Beauty.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="jayaho()">JayahoJanatha<a href="music/Jayaho Janatha.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="crack()">RockOnBro<a href="music/Rock On Bro.mp3"download><i class="fa fa-download"></i></a></div>
@@ -31,85 +31,42 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var pranamam = document.getElementById("pranamam");
-      var isPlaying = false;
-
-      function togglePlay() {
-        isPlaying ? pranamam.pause() : pranamam.play();
-      };
-
-      pranamam.onplaying = function() {
-        isPlaying = true;
-      };
-      pranamam.onpause = function() {
-        isPlaying = false;
+    var pranamam = document.getElementById("pranamam");
+      function pranama() {
+        return pranamam.paused ? pranamam.play() : pranamam.pause();
       };
       var Apple = document.getElementById("Apple");
-      var isPlaying = false;
 
       function apple() {
-        isPlaying ? Apple.pause() : Apple.play();
+        return Apple.paused ? Apple.play() : Apple.pause();
       };
-
-      Apple.onplaying = function() {
-        isPlaying = true;
-      };
-      Apple.onpause = function() {
-          isPlaying = false;
-        };
       var jayahoJanatha = document.getElementById("jayahoJanatha");
-      var isPlaying = false;
 
       function jayaho() {
-        isPlaying ? jayahoJanatha.pause() : jayahoJanatha.play();
+        return jayahoJanatha.paused ? jayahoJanatha.play() : jayahoJanatha.pause();
       };
-
-      jayahoJanatha.onplaying = function() {
-        isPlaying = true;
-      };
-      jayahoJanatha.onpause = function() {
-        isPlaying = false;
-      };
-      var rock = document.getElementById("Rock");
-      var isPlaying = false;
+      var Rock = document.getElementById("Rock");
 
       function crack() {
-        isPlaying ? rock.pause() : rock.play();
-      };
-
-      rock.onplaying = function() {
-        isPlaying = true;
-      };
-      rock.onpause = function() {
-        isPlaying = false;
+        return Rock.paused ? Rock.play() : Rock.pause();
       };
       var local = document.getElementById("local");
-      var isPlaying = false;
-
       function pakka() {
-        isPlaying ? local.pause() : local.play();
-      };
-
-      local.onplaying = function() {
-        isPlaying = true;
-      };
-      local.onpause = function() {
-        isPlaying = false;
+        return local.paused ? local.play() : local.pause();
       };
       var selavu = document.getElementById("selavu");
-      var isPlaying = false;
-
       function sel() {
-        isPlaying ? selavu.pause() : selavu.play();
+        return selavu.paused ? selavu.play() : selavu.pause();
       };
-
-      selavu.onplaying = function() {
-        isPlaying = true;
-      };
-      selavu.onpause = function() {
-        isPlaying = false;
-      };
-
+      document.addEventListener('play', function(e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            console.log(audios[i]);
+            audios[i].pause();
+          }
+        }
+      }, true);
     </script>
 
 </body>

@@ -13,12 +13,12 @@
   <img class="logo" src="slnk/mahesh.jpg" alt="janatagarage" />
 
   <h1>SarileruNikevvaru</h1>
-  <audio id="sarileru" src="slnk/Sarileu Nikevvaru.mp3" preload="auto"></audio>
-  <audio id="block" src="slnk/Mind Block.mp3" preload="auto"></audio>
-  <audio id="suryudu" src="slnk/Suryudivo Chandrudivo.mp3" preload="auto"></audio>
-  <audio id="army" src="slnk/Indian Army.mp3" preload="auto"></audio>
-  <audio id="Anthem" src="slnk/Sarileru Neekevvaru Anthem.mp3" preload="auto"></audio>
-  <audio id="dang" src="slnk/Daang Daang.mp3" preload="auto"></audio>
+  <audio id="sarileru" loop src="slnk/Sarileu Nikevvaru.mp3" preload="auto"></audio>
+  <audio id="block" loop src="slnk/Mind Block.mp3" preload="auto"></audio>
+  <audio id="suryudu" loop src="slnk/Suryudivo Chandrudivo.mp3" preload="auto"></audio>
+  <audio id="army" loop src="slnk/Indian Army.mp3" preload="auto"></audio>
+  <audio id="Anthem" loop src="slnk/Sarileru Neekevvaru Anthem.mp3" preload="auto"></audio>
+  <audio id="dang" loop src="slnk/Daang Daang.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="leru()">SarileruNikevvaru<a href="slnk/Sarileu Nikevvaru.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="blk()">MindBlock<a href="slnk/Mind Block.mp3"download><i class="fa fa-download"></i></a></div>
@@ -31,85 +31,45 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var sarileru = document.getElementById("sarileru");
-      var isPlaying = false;
+    var sarileru = document.getElementById("sarileru");
 
-      function leru() {
-        isPlaying ? sarileru.pause() : sarileru.play();
-      };
+    function leru() {
+      return sarileru.paused ? sarileru.play() : sarileru.pause();
+    };
+    var block = document.getElementById("block");
 
-      sarileru.onplaying = function() {
-        isPlaying = true;
-      };
-      sarileru.onpause = function() {
-        isPlaying = false;
-      };
-      var block = document.getElementById("block");
-      var isPlaying = false;
+    function blk() {
+      return block.paused ? block.play() : block.pause();
+    };
+    var suryudu = document.getElementById("suryudu");
 
-      function blk() {
-        isPlaying ? block.pause() : block.play();
-      };
+    function sura() {
+      return suryudu.paused ? suryudu.play() : suryudu.pause();
+    };
+    var army = document.getElementById("army");
 
-      block.onplaying = function() {
-        isPlaying = true;
-      };
-      block.onpause = function() {
-          isPlaying = false;
-        };
-      var suryudu = document.getElementById("suryudu");
-      var isPlaying = false;
+    function ary() {
+      return army.paused ? army.play() : army.pause();
+    };
+    var Anthem = document.getElementById("Anthem");
 
-      function sura() {
-        isPlaying ? suryudu.pause() : suryudu.play();
-      };
+    function antm() {
+      return Anthem.paused ? Anthem.play() : Anthem.pause();
+    };
+    var dang = document.getElementById("dang");
 
-      suryudu.onplaying = function() {
-        isPlaying = true;
-      };
-      suryudu.onpause = function() {
-        isPlaying = false;
-      };
-      var army = document.getElementById("army");
-      var isPlaying = false;
-
-      function ary() {
-        isPlaying ? army.pause() : army.play();
-      };
-
-      army.onplaying = function() {
-        isPlaying = true;
-      };
-      army.onpause = function() {
-        isPlaying = false;
-      };
-      var Anthem = document.getElementById("Anthem");
-      var isPlaying = false;
-
-      function antm() {
-        isPlaying ? Anthem.pause() : Anthem.play();
-      };
-
-      Anthem.onplaying = function() {
-        isPlaying = true;
-      };
-      Anthem.onpause = function() {
-        isPlaying = false;
-      };
-      var dang = document.getElementById("dang");
-      var isPlaying = false;
-
-      function dan() {
-        isPlaying ? dang.pause() : dang.play();
-      };
-
-      dang.onplaying = function() {
-        isPlaying = true;
-      };
-      dang.onpause = function() {
-        isPlaying = false;
-      };
-
+    function dan() {
+      return dang.paused ? dang.play() : dang.pause();
+    };
+    document.addEventListener('play', function(e) {
+      var audios = document.getElementsByTagName('audio');
+      for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+          console.log(audios[i]);
+          audios[i].pause();
+        }
+      }
+    }, true);
     </script>
 
 </body>

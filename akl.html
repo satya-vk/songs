@@ -13,88 +13,55 @@
   <img class="logo" src="akl/akhil.jpg" alt="janatagarage" />
 
   <h1>Akhil</h1>
-  <audio id="akki" src="akl/Akkineni Akkineni.mp3" preload="auto"></audio>
-  <audio id="hey" src="akl/Hey Akhil.mp3" preload="auto"></audio>
-  <audio id="nenu" src="akl/Nennekkadunte.mp3" preload="auto"></audio>
-  <audio id="pada" src="akl/Padessavae.mp3" preload="auto"></audio>
-  <audio id="zara" src="akl/Zara Zara Navvaradhe.mp3" preload="auto"></audio>
+  <audio id="akki" loop src="akl/Akkineni Akkineni.mp3" preload="auto"></audio>
+  <audio id="hey" loop src="akl/Hey Akhil.mp3" preload="auto"></audio>
+  <audio id="nenu" loop src="akl/Nennekkadunte.mp3" preload="auto"></audio>
+  <audio id="pada" loop src="akl/Padessavae.mp3" preload="auto"></audio>
+  <audio id="zara" loop src="akl/Zara Zara Navvaradhe.mp3" preload="auto"></audio>
   <div class="links">
-    <div class="events" onClick="akk()">Akkineni<a href="akl/Akkineni Akkineni.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="he()">HeyAkhil<a href="akl/Hey Akhil.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="nen()">Nenekkadunte<a href="akl/Nennekkadunte.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="pad()">Padessave<a href="akl/Padessavae.mp3"download><i class="fa fa-download"></i></a></div>
-    <div class="events" onClick="zar()">ZaraZaraNavvaradey<a href="akl/Zara Zara Navvaradhe.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="akk()">Akkineni<a href="akl/Akkineni Akkineni.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="he()">HeyAkhil<a href="akl/Hey Akhil.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="nen()">Nenekkadunte<a href="akl/Nennekkadunte.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="pad()">Padessave<a href="akl/Padessavae.mp3" download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="zar()">ZaraZaraNavvaradey<a href="akl/Zara Zara Navvaradhe.mp3" download><i class="fa fa-download"></i></a></div>
   </div>
   <footer>
-      <p>&copy;satyaVk</p>
-    </footer>
-    <script>
-      var akki = document.getElementById("akki");
-      var isPlaying = false;
+    <p>&copy;satyaVk</p>
+  </footer>
+  <script>
+  var hello = document.getElementById("akki");
+    function akk() {
+      return hello.paused ? hello.play() : hello.pause();
+    };
+    var angle = document.getElementById("hey");
 
-      function akk() {
-        isPlaying ? akki.pause() : akki.play();
-      };
+    function he() {
+      return angle.paused ? angle.play() : angle.pause();
+    };
+    var mer = document.getElementById("nenu");
 
-      akki.onplaying = function() {
-        isPlaying = true;
-      };
-      akki.onpause = function() {
-        isPlaying = false;
-      };
-      var hey = document.getElementById("hey");
-      var isPlaying = false;
+    function nen() {
+      return mer.paused ? mer.play() : mer.pause();
+    };
+    var pada = document.getElementById("pada");
 
-      function he() {
-        isPlaying ? hey.pause() : hey.play();
-      };
-
-      hey.onplaying = function() {
-        isPlaying = true;
-      };
-      hey.onpause = function() {
-          isPlaying = false;
-        };
-      var nenu = document.getElementById("nenu");
-      var isPlaying = false;
-
-      function nen() {
-        isPlaying ? nenu.pause() : nenu.play();
-      };
-
-      nenu.onplaying = function() {
-        isPlaying = true;
-      };
-      nenu.onpause = function() {
-        isPlaying = false;
-      };
-      var pada = document.getElementById("pada");
-      var isPlaying = false;
-
-      function pad() {
-        isPlaying ? pada.pause() : pada.play();
-      };
-
-      pada.onplaying = function() {
-        isPlaying = true;
-      };
-      pada.onpause = function() {
-        isPlaying = false;
-      };
-      var zara = document.getElementById("zara");
-      var isPlaying = false;
-
-      function zar() {
-        isPlaying ? zara.pause() : zara.play();
-      };
-
-      zara.onplaying = function() {
-        isPlaying = true;
-      };
-      zara.onpause = function() {
-        isPlaying = false;
-      };
-    </script>
+    function pad() {
+      return pada.paused ? pada.play() : pada.pause();
+    };
+    var zara = document.getElementById("zara");
+    function zar() {
+      return zara.paused ? zara.play() : mer.pause();
+    };
+    document.addEventListener('play', function(e) {
+      var audios = document.getElementsByTagName('audio');
+      for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+          console.log(audios[i]);
+          audios[i].pause();
+        }
+      }
+    }, true);
+  </script>
 
 </body>
 

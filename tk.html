@@ -13,12 +13,12 @@
   <img class="logo" src="tk/nani.jpg" alt="janatagarage" />
 
   <h1>TuckJagadish</h1>
-  <audio id="inko" src="tk/Inkosaari Inkosaari.mp3" preload="auto"></audio>
-  <audio id="kolo" src="tk/Kolo Kolanna Kolo_.mp3" preload="auto"></audio>
-  <audio id="needi" src="tk/Needhi Nadhantu.mp3" preload="auto"></audio>
-  <audio id="neeti" src="tk/Neeti Neeti Sukka.mp3" preload="auto"></audio>
-  <audio id="tuck" src="tk/Tuck Song.mp3" preload="auto"></audio>
-  <audio id="yeti" src="tk/Yetikokka Poota.mp3" preload="auto"></audio>
+  <audio id="inko" loop src="tk/Inkosaari Inkosaari.mp3" preload="auto"></audio>
+  <audio id="kolo" loop src="tk/Kolo Kolanna Kolo_.mp3" preload="auto"></audio>
+  <audio id="needi" loop src="tk/Needhi Nadhantu.mp3" preload="auto"></audio>
+  <audio id="neeti" loop src="tk/Neeti Neeti Sukka.mp3" preload="auto"></audio>
+  <audio id="tuck" loop src="tk/Tuck Song.mp3" preload="auto"></audio>
+  <audio id="yeti" loop src="tk/Yetikokka Poota.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="ink()">Inkosari<a href="tk/Inkosaari Inkosaari.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="koll()">KoloKolanna<a href="tk/Kolo Kolanna Kolo_.mp3"download><i class="fa fa-download"></i></a></div>
@@ -31,85 +31,45 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var inko = document.getElementById("inko");
-      var isPlaying = false;
+    var inko = document.getElementById("inko");
 
-      function ink() {
-        isPlaying ? inko.pause() : inko.play();
-      };
+    function ink() {
+      return inko.paused ? inko.play() : inko.pause();
+    };
+    var kolo = document.getElementById("kolo");
 
-      inko.onplaying = function() {
-        isPlaying = true;
-      };
-      inko.onpause = function() {
-        isPlaying = false;
-      };
-      var kolo = document.getElementById("kolo");
-      var isPlaying = false;
+    function koll() {
+      return kolo.paused ? kolo.play() : kolo.pause();
+    };
+    var needi = document.getElementById("needi");
 
-      function koll() {
-        isPlaying ? kolo.pause() : kolo.play();
-      };
+    function need() {
+      return needi.paused ? needi.play() : needi.pause();
+    };
+    var neeti = document.getElementById("neeti");
 
-      kolo.onplaying = function() {
-        isPlaying = true;
-      };
-      kolo.onpause = function() {
-          isPlaying = false;
-        };
-      var needi = document.getElementById("needi");
-      var isPlaying = false;
+    function neet() {
+      return neeti.paused ? neeti.play() : neeti.pause();
+    };
+    var tuck = document.getElementById("tuck");
 
-      function need() {
-        isPlaying ? needi.pause() : needi.play();
-      };
+    function tuc() {
+      return tuck.paused ? tuck.play() : tuck.pause();
+    };
+    var yeti = document.getElementById("yeti");
 
-      needi.onplaying = function() {
-        isPlaying = true;
-      };
-      needi.onpause = function() {
-        isPlaying = false;
-      };
-      var neeti = document.getElementById("neeti");
-      var isPlaying = false;
-
-      function neet() {
-        isPlaying ? neeti.pause() : neeti.play();
-      };
-
-      neeti.onplaying = function() {
-        isPlaying = true;
-      };
-      neeti.onpause = function() {
-        isPlaying = false;
-      };
-      var tuck = document.getElementById("tuck");
-      var isPlaying = false;
-
-      function tuc() {
-        isPlaying ? tuck.pause() : tuck.play();
-      };
-
-      tuck.onplaying = function() {
-        isPlaying = true;
-      };
-      tuck.onpause = function() {
-        isPlaying = false;
-      };
-      var yeti = document.getElementById("yeti");
-      var isPlaying = false;
-
-      function yet() {
-        isPlaying ? yeti.pause() : yeti.play();
-      };
-
-      yeti.onplaying = function() {
-        isPlaying = true;
-      };
-      yeti.onpause = function() {
-        isPlaying = false;
-      };
-
+    function yet() {
+      return yeti.paused ? yeti.play() : yeti.pause();
+    };
+    document.addEventListener('play', function(e) {
+      var audios = document.getElementsByTagName('audio');
+      for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+          console.log(audios[i]);
+          audios[i].pause();
+        }
+      }
+    }, true);
     </script>
 
 </body>

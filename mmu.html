@@ -13,11 +13,11 @@
   <img class="logo" src="mmu/akhil.jpg" alt="janatagarage" />
 
   <h1>MrMajnu</h1>
-  <audio id="hey" src="mmu/Hey Nenila.mp3" preload="auto"></audio>
-  <audio id="koppa" src="mmu/Koppamga Koppamga.mp3" preload="auto"></audio>
-  <audio id="maju" src="mmu/MrMajnu.mp3" preload="auto"></audio>
-  <audio id="nalo" src="mmu/Naalo Neeku.mp3" preload="auto"></audio>
-  <audio id="yemo" src="mmu/Yemainado.mp3" preload="auto"></audio>
+  <audio id="hey" loop src="mmu/Hey Nenila.mp3" preload="auto"></audio>
+  <audio id="koppa" loop src="mmu/Koppamga Koppamga.mp3" preload="auto"></audio>
+  <audio id="maju" loop src="mmu/MrMajnu.mp3" preload="auto"></audio>
+  <audio id="nalo" loop src="mmu/Naalo Neeku.mp3" preload="auto"></audio>
+  <audio id="yemo" loop src="mmu/Yemainado.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="he()">HeyNenila<a href="mmu/Hey Nenila.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="kopp()">KopamgaKopamga<a href="mmu/Koppamga Koppamga.mp3"download><i class="fa fa-download"></i></a></div>
@@ -29,71 +29,38 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var hey = document.getElementById("hey");
-      var isPlaying = false;
-
+    var hey = document.getElementById("hey");
       function he() {
-        isPlaying ? hey.pause() : hey.play();
-      };
-
-      hey.onplaying = function() {
-        isPlaying = true;
-      };
-      hey.onpause = function() {
-        isPlaying = false;
+        return hey.paused ? hey.play() : hey.pause();
       };
       var koppa = document.getElementById("koppa");
-      var isPlaying = false;
 
       function kopp() {
-        isPlaying ? koppa.pause() : koppa.play();
+        return koppa.paused ? koppa.play() : koppa.pause();
       };
-
-      koppa.onplaying = function() {
-        isPlaying = true;
-      };
-      koppa.onpause = function() {
-          isPlaying = false;
-        };
       var maju = document.getElementById("maju");
-      var isPlaying = false;
 
       function maj() {
-        isPlaying ? maju.pause() : maju.play();
-      };
-
-      maju.onplaying = function() {
-        isPlaying = true;
-      };
-      maju.onpause = function() {
-        isPlaying = false;
+        return maju.paused ? maju.play() : maju.pause();
       };
       var nalo = document.getElementById("nalo");
-      var isPlaying = false;
 
       function nal() {
-        isPlaying ? nalo.pause() : nalo.play();
-      };
-
-      nalo.onplaying = function() {
-        isPlaying = true;
-      };
-      nalo.onpause = function() {
-        isPlaying = false;
+        return nalo.paused ? nalo.play() : nalo.pause();
       };
       var yemo = document.getElementById("yemo");
-      var isPlaying = false;
-
       function yem() {
-        isPlaying ? yemo.pause() : yemo.play();
+        return yemo.paused ? yemo.play() : yemo.pause();
       };
-
-      yemo.onplaying = function() {
-        isPlaying = true;
-      };
-      yemo.onpause = function() {
-        isPlaying = false;
-      };
+      document.addEventListener('play', function(e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            console.log(audios[i]);
+            audios[i].pause();
+          }
+        }
+      }, true);
     </script>
 
 </body>

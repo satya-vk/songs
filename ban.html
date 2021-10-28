@@ -13,11 +13,11 @@
   <img class="logo" src="ban/mahesh.jpg" alt="Mahesh" />
 
   <h1>BharathAneNenu</h1>
-  <audio id="bharath" src="ban/Bharat Ane Nenu.mp3" preload="auto"></audio>
-  <audio id="know" src="ban/I Dont Know.mp3" preload="auto"></audio>
-  <audio id="ide" src="ban/Ide Kalala Vunnadhe.mp3" preload="auto"></audio>
-  <audio id="vasu" src="ban/O Vasumathi.mp3" preload="auto"></audio>
-  <audio id="sami" src="ban/Vachaadayyo Saami.mp3" preload="auto"></audio>
+  <audio id="bharath" loop src="ban/Bharat Ane Nenu.mp3" preload="auto"></audio>
+  <audio id="know" loop src="ban/I Dont Know.mp3" preload="auto"></audio>
+  <audio id="ide" loop src="ban/Ide Kalala Vunnadhe.mp3" preload="auto"></audio>
+  <audio id="vasu" loop src="ban/O Vasumathi.mp3" preload="auto"></audio>
+  <audio id="sami" loop src="ban/Vachaadayyo Saami.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="bharth()">BharathAneNenu<a href="ban/Bharat Ane Nenu.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="kno()">IdontKnow<a href="ban/I Dont Know.mp3"download><i class="fa fa-download"></i></a></div>
@@ -29,72 +29,38 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var bharath = document.getElementById("bharath");
-      var isPlaying = false;
-
+    var bharath = document.getElementById("bharath");
       function bharth() {
-        isPlaying ? bharath.pause() : bharath.play();
-      };
-
-      bharath.onplaying = function() {
-        isPlaying = true;
-      };
-      bharath.onpause = function() {
-        isPlaying = false;
+        return bharath.paused ? bharath.play() : bharath.pause();
       };
       var know = document.getElementById("know");
-      var isPlaying = false;
 
       function kno() {
-        isPlaying ? know.pause() : know.play();
+        return know.paused ? know.play() : know.pause();
       };
-
-      know.onplaying = function() {
-        isPlaying = true;
-      };
-      know.onpause = function() {
-          isPlaying = false;
-        };
       var ide = document.getElementById("ide");
-      var isPlaying = false;
 
       function idee() {
-        isPlaying ? ide.pause() : ide.play();
-      };
-
-      ide.onplaying = function() {
-        isPlaying = true;
-      };
-      ide.onpause = function() {
-        isPlaying = false;
+        return ide.paused ? ide.play() : ide.pause();
       };
       var vasu = document.getElementById("vasu");
-      var isPlaying = false;
 
       function vas() {
-        isPlaying ? vasu.pause() : vasu.play();
-      };
-
-      vasu.onplaying = function() {
-        isPlaying = true;
-      };
-      vasu.onpause = function() {
-        isPlaying = false;
+        return vasu.paused ? vasu.play() : vasu.pause();
       };
       var sami = document.getElementById("sami");
-      var isPlaying = false;
-
       function sam() {
-        isPlaying ? sami.pause() : sami.play();
+        return sami.paused ? sami.play() : sami.pause();
       };
-
-      sami.onplaying = function() {
-        isPlaying = true;
-      };
-      sami.onpause = function() {
-        isPlaying = false;
-      };
-
+      document.addEventListener('play', function(e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            console.log(audios[i]);
+            audios[i].pause();
+          }
+        }
+      }, true);
     </script>
 
 </body>

@@ -13,11 +13,11 @@
   <img class="logo" src="bb2/prabhas.jpg" alt="janatagarage" />
 
   <h1>Bahubali2</h1>
-  <audio id="dandam" src="bb2/Dandaalayyaa.mp3" preload="auto"></audio>
-  <audio id="bali" src="bb2/Saahore Baahubali.mp3" preload="auto"></audio>
-  <audio id="kanna" src="bb2/Kannaa Nidurinchara.mp3" preload="auto"></audio>
-  <audio id="hamsa" src="bb2/Hamsa Naava.mp3" preload="auto"></audio>
-  <audio id="oka" src="bb2/Oka Praanam.mp3" preload="auto"></audio>
+  <audio id="dandam"  loop src="bb2/Dandaalayyaa.mp3" preload="auto"></audio>
+  <audio id="bali" loop src="bb2/Saahore Baahubali.mp3" preload="auto"></audio>
+  <audio id="kanna" loop src="bb2/Kannaa Nidurinchara.mp3" preload="auto"></audio>
+  <audio id="hamsa" loop src="bb2/Hamsa Naava.mp3" preload="auto"></audio>
+  <audio id="oka" loop src="bb2/Oka Praanam.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="danda()">Dandalayya<a href="bb2/Dandaalayyaac.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="bal()">SaahoreBahubali<a href="bb2/Saahore Baahubali.mp3"download><i class="fa fa-download"></i></a></div>
@@ -29,71 +29,38 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var dandam = document.getElementById("dandam");
-      var isPlaying = false;
-
+    var dandam = document.getElementById("dandam");
       function danda() {
-        isPlaying ? dandam.pause() : dandam.play();
-      };
-
-      dandam.onplaying = function() {
-        isPlaying = true;
-      };
-      dandam.onpause = function() {
-        isPlaying = false;
+        return dandam.paused ? dandam.play() : dandam.pause();
       };
       var bali = document.getElementById("bali");
-      var isPlaying = false;
 
       function bal() {
-        isPlaying ? bali.pause() : bali.play();
+        return bali.paused ? bali.play() : bali.pause();
       };
-
-      bali.onplaying = function() {
-        isPlaying = true;
-      };
-      bali.onpause = function() {
-          isPlaying = false;
-        };
       var kanna = document.getElementById("kanna");
-      var isPlaying = false;
 
       function kann() {
-        isPlaying ? kanna.pause() : kanna.play();
-      };
-
-      kanna.onplaying = function() {
-        isPlaying = true;
-      };
-      kanna.onpause = function() {
-        isPlaying = false;
+        return kanna.paused ? kanna.play() : kanna.pause();
       };
       var hamsa = document.getElementById("hamsa");
-      var isPlaying = false;
 
       function hams() {
-        isPlaying ? hamsa.pause() : hamsa.play();
-      };
-
-      hamsa.onplaying = function() {
-        isPlaying = true;
-      };
-      hamsa.onpause = function() {
-        isPlaying = false;
+        return hamsa.paused ? hamsa.play() : hamsa.pause();
       };
       var oka = document.getElementById("oka");
-      var isPlaying = false;
-
       function ok() {
-        isPlaying ? oka.pause() : oka.play();
+        return oka.paused ? oka.play() : oka.pause();
       };
-
-      oka.onplaying = function() {
-        isPlaying = true;
-      };
-      oka.onpause = function() {
-        isPlaying = false;
-      };
+      document.addEventListener('play', function(e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            console.log(audios[i]);
+            audios[i].pause();
+          }
+        }
+      }, true);
     </script>
 
 </body>

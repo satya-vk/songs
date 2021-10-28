@@ -13,12 +13,12 @@
   <img class="logo" src="Nkp/tarak.jpg" alt="Ntr" />
 
   <h1>NannakuPrematho</h1>
-  <audio id="follow" src="Nkp/Follow Follow.mp3" preload="auto"></audio>
-  <audio id="Dhebba" src="Nkp/Love Dhebba.mp3" preload="auto"></audio>
-  <audio id="again" src="Nkp/Love Me Again.mp3" preload="auto"></audio>
-  <audio id="Manasu" src="Nkp/Na Manasu Neelo.mp3" preload="auto"></audio>
-  <audio id="prema" src="Nkp/Nannaku Prematho.mp3" preload="auto"></audio>
-  <audio id="stop" src="Nkp/Dont stop.mp3" preload="auto"></audio>
+  <audio id="follow" loop src="Nkp/Follow Follow.mp3" preload="auto"></audio>
+  <audio id="Dhebba" loop src="Nkp/Love Dhebba.mp3" preload="auto"></audio>
+  <audio id="again" loop src="Nkp/Love Me Again.mp3" preload="auto"></audio>
+  <audio id="Manasu" loop src="Nkp/Na Manasu Neelo.mp3" preload="auto"></audio>
+  <audio id="prema" loop src="Nkp/Nannaku Prematho.mp3" preload="auto"></audio>
+  <audio id="stop" loop src="Nkp/Dont stop.mp3" preload="auto"></audio>
   <div class="links">
     <div class="events" onClick="fol()">FollowFollow<a href="Nkp/Follow Follow.mp3"download><i class="fa fa-download"></i></a></div>
     <div class="events" onClick="Dheb()">LoveDhebba<a href="Nkp/Love Dhebba.mp3"download><i class="fa fa-download"></i></a></div>
@@ -31,85 +31,42 @@
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var follow = document.getElementById("follow");
-      var isPlaying = false;
-
+    var follow = document.getElementById("follow");
       function fol() {
-        isPlaying ? follow.pause() : follow.play();
-      };
-
-      follow.onplaying = function() {
-        isPlaying = true;
-      };
-      follow.onpause = function() {
-        isPlaying = false;
+        return follow.paused ? follow.play() : follow.pause();
       };
       var Dhebba = document.getElementById("Dhebba");
-      var isPlaying = false;
 
       function Dheb() {
-        isPlaying ? Dhebba.pause() : Dhebba.play();
+        return Dhebba.paused ? Dhebba.play() : Dhebba.pause();
       };
-
-      Dhebba.onplaying = function() {
-        isPlaying = true;
-      };
-      Dhebba.onpause = function() {
-          isPlaying = false;
-        };
       var again = document.getElementById("again");
-      var isPlaying = false;
 
       function agin() {
-        isPlaying ? again.pause() : again.play();
-      };
-
-      again.onplaying = function() {
-        isPlaying = true;
-      };
-      again.onpause = function() {
-        isPlaying = false;
+        return again.paused ? again.play() : again.pause();
       };
       var Manasu = document.getElementById("Manasu");
-      var isPlaying = false;
 
       function Mansu() {
-        isPlaying ? Manasu.pause() : Manasu.play();
-      };
-
-      Manasu.onplaying = function() {
-        isPlaying = true;
-      };
-      Manasu.onpause = function() {
-        isPlaying = false;
+        return Manasu.paused ? Manasu.play() : Manasu.pause();
       };
       var prema = document.getElementById("prema");
-      var isPlaying = false;
-
       function prm() {
-        isPlaying ? prema.pause() : prema.play();
-      };
-
-      prema.onplaying = function() {
-        isPlaying = true;
-      };
-      prema.onpause = function() {
-        isPlaying = false;
+        return prema.paused ? prema.play() : prema.pause();
       };
       var stop = document.getElementById("stop");
-      var isPlaying = false;
-
       function stp() {
-        isPlaying ? stop.pause() : stop.play();
+        return stop.paused ? stop.play() : stop.pause();
       };
-
-      stop.onplaying = function() {
-        isPlaying = true;
-      };
-      stop.onpause = function() {
-        isPlaying = false;
-      };
-
+      document.addEventListener('play', function(e) {
+        var audios = document.getElementsByTagName('audio');
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            console.log(audios[i]);
+            audios[i].pause();
+          }
+        }
+      }, true);
     </script>
 
 </body>

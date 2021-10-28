@@ -15,25 +15,25 @@
   <h1>RRR</h1>
   <audio id="dosti" src="rrr/Dosti.mp3" preload="auto"></audio>
   <div class="links">
-    <div class="events" onClick="dost()">Dosti<a href="blbm/Bale Bale.mp3"download><i class="fa fa-download"></i></a></div>
+    <div class="events" onClick="dost()">Dosti<a href="rrr/Dosti.mp3"download><i class="fa fa-download"></i></a></div>
   </div>
   <footer>
       <p>&copy;satyaVk</p>
     </footer>
     <script>
-      var dosti = document.getElementById("dosti");
-      var isPlaying = false;
-
-      function dost() {
-        isPlaying ? dosti.pause() : dosti.play();
-      };
-
-      dosti.onplaying = function() {
-        isPlaying = true;
-      };
-      dosti.onpause = function() {
-        isPlaying = false;
-      };
+    var dosti = document.getElementById("dosti");
+    function dost() {
+      return dosti.paused ? dosti.play() : dosti.pause();
+    };
+    document.addEventListener('play', function(e) {
+      var audios = document.getElementsByTagName('audio');
+      for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+          console.log(audios[i]);
+          audios[i].pause();
+        }
+      }
+    }, true);
     </script>
 
 </body>
