@@ -29,6 +29,17 @@ h1{
 i{
   float:right;
 }
+@media screen and (min-width:1200px){
+  .events{
+    display:block;
+    text-align: center;
+    font-size:2rem;
+    font-weight:bold;
+    margin-top:25px;
+    padding:2% 1%;
+    color:#228B22;
+  }
+}
 footer{
   text-align:center;
 }
