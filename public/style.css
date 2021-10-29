@@ -7,6 +7,28 @@ body{
   color:blue;
   font-family: 'Roboto Slab', serif;
 }
+.search-bar{
+  float:right;
+  position:absolute;
+  right:50px;
+  z-index: 10;
+
+}
+#search{
+  border-radius:30px;
+  outline:none;
+  background-color:skyblue;
+  border:1px pink;
+}
+.fas{
+    font-size: 20px;
+}
+input[type=search]{
+  padding:10px 0 10px 5px;
+}
+input[type=search]:focus{
+  text-align:center;
+}
 .col{
   margin-top:50px;
 }

@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet"href="style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel = "icon" href="https://th.bing.com/th/id/OIP.4t0R-FjXRk1fejHb9Fc_uAAAAA?pid=ImgDet&rs=1"/>
   </head>
   <body class="container">
     <div class="heading">
       <h1>Music can do mind relax</h1>
       <p>Don't be depressed listen music calm</p>
+    </div>
+    <div class="search-bar">
+      <input type="search" id = "search"name="search" placeholder="SearchFullSongName"/>
+      <a href=""><i class="fas fa-search" onclick="searches()"></i></a>
     </div>
     <div class="container">
       <div class="row">
@@ -82,5 +87,16 @@
         </div>
         </div>
     </div>
+    <script>
+    function searches(){
+      var search=document.getElementById("search").value;
+      console.log(search);
+      var data="";
+      data = search;
+      var win = window.open("/"+data,"_blank");
+      win.focus;
+      }
+
+    </script>
   </body>
 </html>
