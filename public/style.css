@@ -9,8 +9,6 @@ body{
 }
 .search-bar{
   float:right;
-  position:absolute;
-  right:50px;
   z-index: 10;
 
 }
